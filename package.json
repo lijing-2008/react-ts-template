@@ -17,10 +17,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +42,13 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^7.0.0-alpha.9"
+    "@craco/craco": "^7.0.0-alpha.9",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "prettier": "^2.8.0"
   }
 }
