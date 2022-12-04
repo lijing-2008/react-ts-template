@@ -14,5 +14,5 @@
 #### 3. tag axios+ts
 - 对axios进行封装
 
-### antdesign
-- 继承AntDesign，在ant-design分支
+### 4. tag ant-design (&branch:ant-design)
+- 集成AntDesign，在ant-design分支
