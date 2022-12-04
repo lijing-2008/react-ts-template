@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { useRoutes } from 'react-router-dom'
 import routes from '@/router'
 import { useNavigate } from 'react-router-dom'
-import { Button } from 'antd'
+import { Button, Radio, ConfigProvider, theme } from 'antd'
 
 function App() {
   const navigate = useNavigate()
@@ -11,10 +11,26 @@ function App() {
   }
   return (
     <div className="App">
-      <button onClick={() => handleClick('/login')}>Login</button>
-      <button onClick={() => handleClick('/home')}>Home</button>
-      <Suspense fallback="">{useRoutes(routes)}</Suspense>
-      <Button type="primary">button</Button>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: '#ff8189'
+          },
+          // algorithm: theme.darkAlgorithm,
+          components: {
+            Radio: {
+              colorPrimary: '#669966'
+            }
+          }
+        }}
+      >
+        <button onClick={() => handleClick('/login')}>Login</button>
+        <button onClick={() => handleClick('/home')}>Home</button>
+        <Suspense fallback="">{useRoutes(routes)}</Suspense>
+        <Button type="primary">button</Button>
+        <Button>button</Button>
+        <Radio>Radio</Radio>
+      </ConfigProvider>
     </div>
   )
 }
