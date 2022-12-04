@@ -8,6 +8,7 @@ import '@/assets/css/index.css'
 import App from '@/App'
 import theme from '@/assets/theme'
 import store from '@/store'
+import ddRequest from '@/service'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
@@ -19,3 +20,19 @@ root.render(
     </Provider>
   </ThemeProvider>
 )
+
+// test axios code
+ddRequest
+  .post({
+    url: '/login',
+    data: {
+      username: 'coderlj',
+      password: '1231'
+    }
+  })
+  .then((res) => {
+    console.log('res', res)
+  })
+  .catch((err) => {
+    console.log('------error!-----', err)
+  })
