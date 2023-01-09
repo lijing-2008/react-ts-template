@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
     'react/display-name': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off'
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unused-vars': 'off'
   }
 }

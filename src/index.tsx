@@ -9,6 +9,7 @@ import App from '@/App'
 import theme from '@/assets/theme'
 import store from '@/store'
 import ddRequest from '@/service'
+import './class-transformer/test1'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
